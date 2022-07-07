@@ -1,4 +1,4 @@
-import { Button, Form, Input, Select, Switch, Table } from 'antd'
+import { Button, DatePicker, Form, Input, Select, Switch, Table } from 'antd'
 import 'antd/dist/antd.css'
 import { useRef } from 'react'
 import './index.css'
@@ -27,7 +27,18 @@ const TableEditForm = () => {
           )
         }
       },
-
+      {
+        title: '日期',
+        width: 200,
+        dataIndex: 'time',
+        render(text, field) {
+          return (
+            <Form.Item rules={[{ required: true, message: '请选择日期' }]} name={[field.name, 'time']} fieldKey={[field.fieldKey, 'time']}>
+              <DatePicker format="YYYY-MM-DD" value={text} />
+            </Form.Item>
+          );
+        }
+      },
       {
         title: '启用',
         dataIndex: 'bEnable',
