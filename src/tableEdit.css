@@ -1,0 +1,32 @@
+.table-edit-wrapper {
+  height: 100%;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-edit-header {
+  height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.table-edit-header > bottom:nth-child(2) {
+  margin: 0px 5px;
+}
+.ant-table table {
+  width: 100%;
+}
+.table-edit-table,
+.table-edit-table-form {
+  width: 1000px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.table-edit-table {
+  margin-top: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
